@@ -79,7 +79,7 @@ jdbc:h2:mem:testdb
 | Method | Endpoint |	Description
 | :------ | :----: | ----: |
 POST   | /api/books	    | Create a new book
-GET	   | /api/books	    | List all books
+GET	   | /api/books?title={String} | List all books whose title contains the string parameter
 GET	   | /api/books/{id}	| Get book by ID
 PUT	   | /api/books/{id}	| Update book
 DELETE | /api/books/{id}	| Delete book
