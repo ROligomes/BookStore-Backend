@@ -11,7 +11,7 @@ public interface BookService {
 
     BookResponse findById(Long id);
 
-    List<BookResponse> findAll();
+    List<BookResponse> findByTitle(String title);
 
     void delete(Long id);
 }

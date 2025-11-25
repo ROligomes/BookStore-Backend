@@ -35,8 +35,8 @@ public class BookController {
     }
 
     @GetMapping
-    public ResponseEntity<List<BookResponse>> findAll() {
-        return ResponseEntity.ok(bookService.findAll());
+    public ResponseEntity<List<BookResponse>> findByTitle(@RequestParam String title) {
+        return ResponseEntity.ok(bookService.findByTitle(title));
     }
 
     @DeleteMapping("/{id}")

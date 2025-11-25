@@ -39,8 +39,8 @@ public class BookServiceImpl implements BookService {
     }
 
     @Override
-    public List<BookResponse> findAll() {
-        return bookRepository.findAll()
+    public List<BookResponse> findByTitle(String title) {
+        return bookRepository.findByTitleContaining(title)
                 .stream()
                 .map(mapper::toResponse)
                 .toList();
