@@ -18,6 +18,10 @@ public class Book {
 
     private String title;
     private String author;
+    private String isbn;
+    private String category;
+    private String publisher;
+    private String description;
 
     private int publication_year;
 }

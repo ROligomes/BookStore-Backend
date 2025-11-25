@@ -11,6 +11,10 @@ public class BookMapper {
         return Book.builder()
                 .title(request.title())
                 .author(request.author())
+                .isbn(request.isbn())
+                .category(request.category())
+                .publisher(request.publisher())
+                .description(request.description())
                 .publication_year(request.publication_year())
                 .build();
     }
@@ -20,6 +24,10 @@ public class BookMapper {
                 book.getId(),
                 book.getTitle(),
                 book.getAuthor(),
+                book.getIsbn(),
+                book.getCategory(),
+                book.getPublisher(),
+                book.getDescription(),
                 book.getPublication_year()
         );
     }
@@ -27,6 +35,10 @@ public class BookMapper {
     public void updateEntity(Book book, BookUpdateRequest request) {
         book.setTitle(request.title());
         book.setAuthor(request.author());
+        book.setIsbn(request.isbn());
+        book.setCategory(request.category());
+        book.setPublisher(request.publisher());
+        book.setDescription(request.description());
         book.setPublication_year(request.publication_year());
     }
 }
